@@ -5,7 +5,7 @@ Public Class OOPDraw
     Private dragging As Boolean = False
     Private startOfDrag As Point = Point.Empty
     Private lastMousePosition As Point = Point.Empty
-    Private shapes As List(Of Object) = New List(Of Object)
+    Private shapes As List(Of Shape) = New List(Of Shape)
 
     Public Sub New()
         InitializeComponent()
@@ -16,7 +16,7 @@ Public Class OOPDraw
 
     Private Sub Canvas_Paint(ByVal sender As Object, ByVal e As PaintEventArgs) Handles Canvas.Paint
         Dim gr As Graphics = e.Graphics
-        For Each shape As Object In shapes
+        For Each shape As Shape In shapes
             shape.Draw(gr)
         Next
     End Sub
@@ -35,7 +35,7 @@ Public Class OOPDraw
 
     Private Sub Canvas_MouseMove(ByVal sender As Object, ByVal e As MouseEventArgs) Handles Canvas.MouseMove
         If dragging Then
-            Dim shape As Object = shapes.Last()
+            Dim shape As Shape = shapes.Last()
             shape.GrowTo(e.X, e.Y)
             lastMousePosition = e.Location
             Refresh()

@@ -1,4 +1,5 @@
 ﻿Public Class Line
+    Inherits Shape
 
     Public ReadOnly Property Pen As Pen
     Public ReadOnly Property X1 As Integer
@@ -18,11 +19,12 @@
         Me.New(p, x1, y1, x1, y1)
     End Sub
 
-    Public Sub Draw(ByVal g As Graphics)
+
+    Public Overrides Sub Draw(ByVal g As Graphics)
         g.DrawLine(Pen, X1, Y1, X2, Y2)
     End Sub
 
-    Public Sub GrowTo(ByVal x2 As Integer, ByVal y2 As Integer)
+    Public Overrides Sub GrowTo(ByVal x2 As Integer, ByVal y2 As Integer)
         _X2 = x2
         _Y2 = y2
     End Sub

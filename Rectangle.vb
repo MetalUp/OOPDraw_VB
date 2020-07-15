@@ -1,4 +1,7 @@
 ﻿Public Class Rectangle
+
+    Inherits Shape
+
     Public ReadOnly Property Pen As Pen
     Public ReadOnly Property X1 As Integer
     Public ReadOnly Property Y1 As Integer
@@ -17,7 +20,7 @@
         Me.New(p, x1, y1, x1, y1)
     End Sub
 
-    Public Sub Draw(ByVal g As Graphics)
+    Public Overrides Sub Draw(ByVal g As Graphics)
         Dim x As Integer = Math.Min(X1, X2)
         Dim y As Integer = Math.Min(Y1, Y2)
         Dim w As Integer = Math.Max(X1, X2) - x
@@ -25,8 +28,9 @@
         g.DrawRectangle(Pen, x, y, w, h)
     End Sub
 
-    Public Sub GrowTo(ByVal x2 As Integer, ByVal y2 As Integer)
+    Public Overrides Sub GrowTo(ByVal x2 As Integer, ByVal y2 As Integer)
         _X2 = x2
         _Y2 = y2
     End Sub
+
 End Class
