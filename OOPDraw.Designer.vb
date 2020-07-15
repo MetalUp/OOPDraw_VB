@@ -90,7 +90,7 @@ Partial Class OOPDraw
         'Shape
         '
         Me.Shape.FormattingEnabled = True
-        Me.Shape.Items.AddRange(New Object() {"Line", "Rectangle"})
+        Me.Shape.Items.AddRange(New Object() {"Line", "Rectangle", "Ellipse", "Circle"})
         Me.Shape.Location = New System.Drawing.Point(26, 200)
         Me.Shape.Name = "Shape"
         Me.Shape.Size = New System.Drawing.Size(121, 28)

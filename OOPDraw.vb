@@ -30,6 +30,10 @@ Public Class OOPDraw
                 shapes.Add(New Line(currentPen, e.X, e.Y))
             Case "Rectangle"
                 shapes.Add(New Rectangle(currentPen, e.X, e.Y))
+            Case "Ellipse"
+                shapes.Add(New Ellipse(currentPen, e.X, e.Y))
+            Case "Circle"
+                shapes.Add(New Circle(currentPen, e.X, e.Y))
         End Select
     End Sub
 

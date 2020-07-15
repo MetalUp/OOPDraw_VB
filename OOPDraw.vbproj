@@ -77,6 +77,8 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Circle.vb" />
+    <Compile Include="Ellipse.vb" />
     <Compile Include="Rectangle.vb" />
     <Compile Include="Line.vb" />
     <Compile Include="OOPDraw.vb">
@@ -125,6 +127,7 @@
       <LastGenOutput>Settings.Designer.vb</LastGenOutput>
     </None>
     <None Include="App.config" />
+    <None Include="OOPDraw.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
