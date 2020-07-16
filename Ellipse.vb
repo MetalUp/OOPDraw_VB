@@ -9,13 +9,8 @@
         MyBase.New(p, x1, y1, x2, y2)
     End Sub
 
-    Public Overrides Sub Draw(g As Graphics)
-        Dim x As Integer = Math.Min(X1, X2)
-        Dim y As Integer = Math.Min(Y1, Y2)
-        Dim w As Integer = Math.Max(X1, X2) - x
-        Dim h As Integer = Math.Max(Y1, Y2) - y
-        If w > 0 AndAlso h > 0 Then
-            g.DrawArc(Pen, x, y, w, h, 0F, 360.0F)
-        End If
+    Public Overrides Sub Draw(ByVal g As Graphics)
+        DrawClosedArc(g, Me)
     End Sub
+
 End Class

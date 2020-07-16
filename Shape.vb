@@ -51,4 +51,12 @@
         _X2 = x2
         _Y2 = y2
     End Sub
+
+    Public Function EnclosingRectangle() As (Integer, Integer, Integer, Integer)
+        Dim x As Integer = Math.Min(X1, X2)
+        Dim y As Integer = Math.Min(Y1, Y2)
+        Dim w As Integer = Math.Max(X1, X2) - x
+        Dim h As Integer = Math.Max(Y1, Y2) - y
+        Return (x, y, w, h)
+    End Function
 End Class

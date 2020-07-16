@@ -10,11 +10,8 @@
     End Sub
 
     Public Overrides Sub Draw(ByVal g As Graphics)
-        Dim x As Integer = Math.Min(X1, X2)
-        Dim y As Integer = Math.Min(Y1, Y2)
-        Dim w As Integer = Math.Max(X1, X2) - x
-        Dim h As Integer = Math.Max(Y1, Y2) - y
-        g.DrawRectangle(Pen, x, y, w, h)
+        Dim enc = EnclosingRectangle()
+        g.DrawRectangle(Pen, enc.Item1, enc.Item2, enc.Item3, enc.Item4)
     End Sub
 
 End Class
