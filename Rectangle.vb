@@ -14,4 +14,18 @@
         g.DrawRectangle(Pen, enc.Item1, enc.Item2, enc.Item3, enc.Item4)
     End Sub
 
+    Public Function FullySurrounds(ByVal s As Shape) As Boolean
+        Dim enc = EnclosingRectangle()
+        Dim x = enc.Item1
+        Dim y = enc.Item2
+        Dim w = enc.Item3
+        Dim h = enc.Item4
+        Dim sEnc = s.EnclosingRectangle()
+        Dim xs = sEnc.Item1
+        Dim ys = sEnc.Item2
+        Dim ws = sEnc.Item3
+        Dim hs = sEnc.Item4
+        Return x < xs And y < ys And x + w > xs + ws And y + h > ys + hs
+    End Function
+
 End Class

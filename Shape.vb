@@ -1,4 +1,9 @@
-﻿Public MustInherit Class Shape
+﻿Imports System.Drawing.Drawing2D
+
+Public MustInherit Class Shape
+
+    Public ReadOnly Property Selected As Boolean
+
     Protected _Pen As Pen
     Public ReadOnly Property Pen() As Pen
         Get
@@ -35,7 +40,7 @@
     End Property
 
     Public Sub New(ByVal p As Pen, ByVal x1 As Integer, ByVal y1 As Integer, ByVal x2 As Integer, ByVal y2 As Integer)
-        _Pen = p
+        _Pen = New Pen(p.Color, p.Width)
         _X1 = x1
         _Y1 = y1
         _X2 = x2
@@ -59,4 +64,22 @@
         Dim h As Integer = Math.Max(Y1, Y2) - y
         Return (x, y, w, h)
     End Function
+
+    Public Sub MoveBy(ByVal xDelta As Integer, ByVal yDelta As Integer)
+        _X1 += xDelta
+        _Y1 += yDelta
+        _X2 += xDelta
+        _Y2 += yDelta
+    End Sub
+
+    Public Sub SelectIt()
+        _Selected = True
+        Pen.DashStyle = DashStyle.Dash
+    End Sub
+
+    Public Sub Deselect()
+        _Selected = False
+        Pen.DashStyle = DashStyle.Solid
+    End Sub
+
 End Class

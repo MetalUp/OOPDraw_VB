@@ -29,6 +29,8 @@ Partial Class OOPDraw
         Me.Colour = New System.Windows.Forms.ComboBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Shape = New System.Windows.Forms.ComboBox()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Action = New System.Windows.Forms.ComboBox()
         CType(Me.Canvas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -45,7 +47,7 @@ Partial Class OOPDraw
         '
         Me.LineWidth.FormattingEnabled = True
         Me.LineWidth.Items.AddRange(New Object() {"Thin", "Medium", "Thick"})
-        Me.LineWidth.Location = New System.Drawing.Point(22, 59)
+        Me.LineWidth.Location = New System.Drawing.Point(26, 56)
         Me.LineWidth.Name = "LineWidth"
         Me.LineWidth.Size = New System.Drawing.Size(121, 28)
         Me.LineWidth.TabIndex = 1
@@ -63,7 +65,7 @@ Partial Class OOPDraw
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(22, 103)
+        Me.Label2.Location = New System.Drawing.Point(22, 104)
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(55, 20)
         Me.Label2.TabIndex = 3
@@ -81,7 +83,7 @@ Partial Class OOPDraw
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(26, 176)
+        Me.Label3.Location = New System.Drawing.Point(22, 177)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(56, 20)
         Me.Label3.TabIndex = 5
@@ -96,11 +98,31 @@ Partial Class OOPDraw
         Me.Shape.Size = New System.Drawing.Size(121, 28)
         Me.Shape.TabIndex = 6
         '
+        'Label4
+        '
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(22, 254)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(54, 20)
+        Me.Label4.TabIndex = 7
+        Me.Label4.Text = "Action"
+        '
+        'Action
+        '
+        Me.Action.FormattingEnabled = True
+        Me.Action.Items.AddRange(New Object() {"Draw", "Move", "Select"})
+        Me.Action.Location = New System.Drawing.Point(26, 277)
+        Me.Action.Name = "Action"
+        Me.Action.Size = New System.Drawing.Size(121, 28)
+        Me.Action.TabIndex = 8
+        '
         'OOPDraw
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(1013, 627)
+        Me.Controls.Add(Me.Action)
+        Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.Shape)
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Colour)
@@ -123,4 +145,6 @@ Partial Class OOPDraw
     Friend WithEvents Colour As ComboBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Shape As ComboBox
+    Friend WithEvents Label4 As Label
+    Friend WithEvents Action As ComboBox
 End Class
