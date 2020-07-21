@@ -1,32 +1,54 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="OOPDraw.Shape">
-    <Position X="3.5" Y="0.5" Width="1.5" />
+  <Class Name="OOPDraw.Shape" Collapsed="true">
+    <Position X="3.5" Y="3.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAEAAAIAAACgAAAAADAAAAAIQBAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAEAAAIIAACgAAACADAAAAAIQBQAAAAAAAAAAAICI=</HashCode>
       <FileName>Shape.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="OOPDraw.Rectangle">
-    <Position X="4" Y="4.75" Width="1.75" />
+  <Class Name="OOPDraw.Rectangle" Collapsed="true">
+    <Position X="3.75" Y="4.75" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAEAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Rectangle.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="OOPDraw.Line">
-    <Position X="1.5" Y="4.75" Width="1.75" />
+  <Class Name="OOPDraw.Circle" Collapsed="true">
+    <Position X="1.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Circle.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPDraw.Ellipse" Collapsed="true">
+    <Position X="2.75" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ellipse.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OOPDraw.Line" Collapsed="true">
+    <Position X="5" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Line.vb</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="OOPDraw.Ellipse">
-    <Position X="6.5" Y="4.75" Width="1.5" />
+  <Class Name="OOPDraw.CompositeShape">
+    <Position X="6.75" Y="4.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Ellipse.vb</FileName>
+      <HashCode>AAAAAAAAAAAAAoAAAAAAAACAAAAAAAAAAAAAAAAAIAA=</HashCode>
+      <FileName>CompositeShape.vb</FileName>
     </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Components" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="System.Collections.Generic.List(Of T)" Collapsed="true">
+    <Position X="9.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier />
+    <Lollipop Position="0.2" />
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>

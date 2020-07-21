@@ -19,4 +19,9 @@
         _X2 = X1 + diameter
         _Y2 = Y1 + diameter
     End Sub
+
+    Public Overrides Function Clone() As Shape
+        Return New Circle(Pen, X1, Y1, X2, Y2)
+    End Function
+
 End Class

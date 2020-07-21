@@ -84,6 +84,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Circle.vb" />
+    <Compile Include="CompositeShape.vb" />
     <Compile Include="DrawingFunctions.vb" />
     <Compile Include="Ellipse.vb" />
     <Compile Include="Rectangle.vb" />

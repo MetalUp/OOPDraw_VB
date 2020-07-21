@@ -13,4 +13,7 @@
         DrawClosedArc(g, Me)
     End Sub
 
+    Public Overrides Function Clone() As Shape
+        Return New Ellipse(Pen, X1, Y1, X2, Y2)
+    End Function
 End Class

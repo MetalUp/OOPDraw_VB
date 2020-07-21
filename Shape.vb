@@ -65,7 +65,7 @@ Public MustInherit Class Shape
         Return (x, y, w, h)
     End Function
 
-    Public Sub MoveBy(ByVal xDelta As Integer, ByVal yDelta As Integer)
+    Public Overridable Sub MoveBy(ByVal xDelta As Integer, ByVal yDelta As Integer)
         _X1 += xDelta
         _Y1 += yDelta
         _X2 += xDelta
@@ -81,5 +81,7 @@ Public MustInherit Class Shape
         _Selected = False
         Pen.DashStyle = DashStyle.Solid
     End Sub
+
+    Public MustOverride Function Clone() As Shape
 
 End Class

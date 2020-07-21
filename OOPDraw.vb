@@ -130,5 +130,45 @@ Public Class OOPDraw
         Next
     End Sub
 
+    Private Sub Action_SelectedIndexChanged(ByVal sender As Object, ByVal e As EventArgs) Handles Action.SelectedIndexChanged
+        Select Case Action.Text
+            Case "Group"
+                GroupSelectedShapes()
+            Case "Delete"
+                DeleteSelectedShapes()
+            Case "Duplicate"
+                DuplicateSelectedShapes()
+        End Select
+    End Sub
+    Private Sub GroupSelectedShapes()
+        Dim members = GetSelectedShapes()
+        If members.Count < 2 Then Return
+        Dim compS As CompositeShape = New CompositeShape(members)
+        compS.SelectIt()
+        shapes.Add(compS)
+        For Each m As Shape In members
+            shapes.Remove(m)
+            m.Deselect()
+        Next
+        Refresh()
+    End Sub
+
+    Private Sub DeleteSelectedShapes()
+        For Each s As Shape In GetSelectedShapes()
+            shapes.Remove(s)
+        Next
+        Refresh()
+    End Sub
+
+    Private Sub DuplicateSelectedShapes()
+        For Each shape As Shape In GetSelectedShapes()
+            shape.Deselect()
+            Dim clone As Shape = shape.Clone()
+            clone.MoveBy(50, 50)
+            clone.SelectIt()
+            shapes.Add(clone)
+        Next
+        Refresh()
+    End Sub
 End Class
 

@@ -110,7 +110,7 @@ Partial Class OOPDraw
         'Action
         '
         Me.Action.FormattingEnabled = True
-        Me.Action.Items.AddRange(New Object() {"Draw", "Move", "Select"})
+        Me.Action.Items.AddRange(New Object() {"Draw", "Move", "Select", "Group", "Delete", "Duplicate"})
         Me.Action.Location = New System.Drawing.Point(26, 277)
         Me.Action.Name = "Action"
         Me.Action.Size = New System.Drawing.Size(121, 28)

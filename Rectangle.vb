@@ -28,4 +28,8 @@
         Return x < xs And y < ys And x + w > xs + ws And y + h > ys + hs
     End Function
 
+    Public Overrides Function Clone() As Shape
+        Return New Rectangle(Pen, X1, Y1, X2, Y2)
+    End Function
+
 End Class
